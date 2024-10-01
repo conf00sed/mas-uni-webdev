@@ -1,0 +1,103 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    --text-light: rgb(188, 180, 187);
+
+    font-family: "Reddit Mono", monospace;
+    margin: 0;
+    padding: 0;
+    background: rgb(11,19,12);
+    background: linear-gradient(45deg, rgb(11,19,12), rgb(110, 124, 110));
+
+    user-select: none;
+}
+
+img {
+    width: 50%;
+}
+
+.brand a {
+    margin-left: 0.5em;
+    font-family: "Jaini", system-ui;
+    font-weight: 600;
+
+    color: rgb(188, 180, 187);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    gap: 2em;
+}
+
+.logo {
+    width: 10em;
+    filter: hue-rotate(180deg);
+}
+
+.dateContainer {
+    padding-left: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+button {
+    border: none;
+    font-size: 1.2em;
+    background-color: transparent;
+    font-weight: 600;
+    color: rgb(188, 180, 187);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(188, 180, 187);
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: rgb(129, 121, 127);
+}
+
+svg {
+    fill: rgb(188, 180, 187);
+    width: 60%
+}
+
+svg:hover {
+    fill: rgb(129, 121, 127);
+}
+
+.date-countdown {
+    text-align: center;
+}
+
+.current-date, .countdown {
+    font-size: 1em;
+}
+
+.socials {
+    bottom: 0em;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

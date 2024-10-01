@@ -1,0 +1,265 @@
+body {
+    --track-color: #233325;
+    --thumb-color: rgb(62, 73, 63);
+    --text-light: rgb(203, 210, 203);
+
+    font-family: "Reddit Mono", monospace;
+    margin: 0;
+    padding: 0;
+    background: rgb(11,19,12);
+    background: linear-gradient(45deg, rgb(11,19,12), rgb(110, 124, 110));
+
+    user-select: none;
+
+    color: var(--text-light);
+}
+
+
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 43, 35);
+    padding: 0.5em 2em 1em 1.5em;
+}
+
+.navbar-brand a {
+    font-family: "Jaini", system-ui;
+    font-weight: 600;
+
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    font-family: "Reddit Mono", monospace;
+    font-weight: 600;
+
+    padding-top: 0.4em;
+
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-item a:hover {
+    color: rgb(129, 121, 127);
+}
+
+
+
+/* title */
+.title {
+    margin-top: 0.8em;
+    border-bottom: 0;
+    font-family: "Jaini", system-ui;
+    color: var(--text-light);
+    font-weight: 900;
+    font-size: 4em;
+    text-shadow: -4px 4px #011404;
+}
+
+
+
+/* showcase */
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+    margin-bottom: 9.6em;
+}
+
+.container>div {
+    border: 3px solid black;
+    flex: 0 0 150px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #0d2c12aa;
+    position: relative;
+    overflow: hidden;
+}
+
+.container > div:nth-of-type(1) {
+    background: url("../resources/pose1.jpg") no-repeat 50% / cover;
+}
+
+.container > div:nth-of-type(2) {
+    color: var(--text-light);
+    background: url("../resources/pose2.jpg") no-repeat 50% / cover;
+}
+
+.container > div:nth-of-type(3) {
+    background: url("../resources/pose3.jpg") no-repeat 50% / cover;
+}
+
+.container > div:nth-of-type(4) {
+    color: var(--text-light);
+    background: url("../resources/pose4.jpg") no-repeat 50% / cover;
+}
+
+.container>div .content {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: #022e05;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translatey(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+    padding: 0.8rem;
+    padding-bottom: 100%;
+
+    color: var(--text-light);
+}
+
+.container>div .content p {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.container>div:hover {
+    flex: 0 0 250px;
+    box-shadow: 1px 3px 15px #ffffff81;
+    transform: translatey(-30px);
+}
+
+.container>div:hover .content {
+    opacity: 1;
+    visibility: visible;
+    transform: translatey(0%);
+
+}
+
+
+/* about  */
+
+.extrah1 {
+    padding: 10px 0;
+    margin: 0;
+    font-family: "Jaini", system-ui;
+    font-size: 3em;
+    text-shadow: -4px 4px #011404;
+    font-weight: 900;
+    border-bottom: 3px solid black;
+}
+
+.more-about {
+    padding: 0 2em  2em;
+    margin: 8em 0;
+    margin-top: 16em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5em;
+}
+
+.extra-inf {
+    width: 60%;
+    border: 3px solid black;
+}
+
+.extra-inf>p {
+    font-size: 20px;
+    padding: 2em;
+}
+
+
+
+
+/* footer */
+
+footer {
+    background: rgba(7, 16, 7, 0.247);
+    color: var(--text-light);
+    text-align: center;
+    padding: 5px 0 20px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: var(--text-ligth);
+}
+
+footer p a:hover {
+    color: var(--text-hover)
+}
+
+/* Smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+svg {
+    fill: var(--text-light);
+}
+
+
+
+/* scrollbar */
+
+body::-webkit-scrollbar {
+    width: 14px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--track-color);
+    /* border-radius: 3px; */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: var(--thumb-color);
+    border-radius: 5px;
+    
+}
+  
+@supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--thumb-color) var(--track-color);
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

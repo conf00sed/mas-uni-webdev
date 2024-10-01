@@ -1,0 +1,235 @@
+html {
+    height: 100%;
+}
+
+body {
+    --track-color: #233325;
+    --thumb-color: rgb(62, 73, 63);
+    --text-light: rgb(188, 180, 187);
+    --text-hover: rgb(129, 121, 127);
+
+    font-family: "Reddit Mono", monospace;
+    margin: 0;
+    padding: 0;
+    background: rgb(11,19,12);
+    background: linear-gradient(45deg, rgb(11,19,12), rgb(110, 124, 110));
+
+    user-select: none;
+}
+
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 43, 35);
+    padding: 0.5em 2em 1em 1.5em;
+}
+
+.navbar-brand a {
+    font-family: "Jaini", system-ui;
+    font-weight: 600;
+
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    font-weight: 600;
+
+    padding-top: 0.4em;
+
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-item a:hover {
+    color: var(--text-hover);
+}
+
+
+/* Signup Form */
+
+.container {
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button {
+    width: 20%;
+}
+
+.login {
+    margin-top: 10px;
+    position: relative;
+    left: -1.5px;
+    text-align: center;
+    font-weight: 700;
+    padding: 4px 0;
+    width: 20%;
+    font-size: 14px;
+    border: 2px solid black;
+    border-bottom: 0;
+    background-color: #546154;
+    animation: height 0.2s ease-in-out;
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: -0.8rem 0.8rem 1px rgba(29, 30, 28, 0.395);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login:hover {
+
+    margin-top:5px;   
+    height: 22px;
+    background: #455045;
+    cursor: pointer;
+}
+
+.signup-card {
+    z-index: 1;
+    /* padding: 0 20px 20px 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin-bottom: 0;
+    box-shadow: -0.8rem 0.8rem 1px rgba(29, 30, 28, 0.395);
+    width: 20%;
+    background-color: #546154;
+}
+
+.signup-header {
+    margin-bottom: 20px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 8px 0;
+    /* font-size: 20px; */
+    font-weight: 700;
+    border-bottom: 2px solid black;
+}
+
+input, .checkbox {
+    width: 172px;
+    font-size: 14px;
+    border: 2px solid black;
+    background-color: #dff9df79;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.submit {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+    padding: 0 4px;
+    
+}
+
+#loginMessage {
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width:30px;
+    height:30px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/* footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(7, 16, 7, 0.247);
+    color: var(--text-light);
+    text-align: center;
+    padding: 5px 0 20px;
+
+}
+
+footer p a {
+    text-decoration: none;
+    color: var(--text-ligth);
+}
+
+footer p a:hover {
+    color: var(--text-hover)
+}
+
+/* Smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+svg {
+    fill: var(--text-light);
+}
+
+
+/* scroll bar */
+
+body::-webkit-scrollbar {
+    width: 14px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--track-color);
+    /* border-radius: 3px; */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: var(--thumb-color);
+    border-radius: 5px;
+    
+}
+  
+@supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--thumb-color) var(--track-color);
+    }
+}

@@ -1,0 +1,279 @@
+body {
+    --track-color: #233325;
+    --thumb-color: rgb(62, 73, 63);
+    --text-light: rgb(188, 180, 187);
+    --text-hover: rgb(129, 121, 127);
+
+    font-family: "Reddit Mono", monospace;
+    margin: 0;
+    padding: 0;
+    background: rgb(11,19,12);
+    background: linear-gradient(45deg, rgb(11,19,12), rgb(110, 124, 110));
+
+    user-select: none;
+    
+    color: var(--text-light);
+}
+
+
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 43, 35);
+    padding: 0.5em 2em 1em 1.5em;
+}
+
+.navbar-brand a {
+    font-family: "Jaini", system-ui;
+    font-weight: 600;
+
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    font-weight: 600;
+
+    padding-top: 0.4em;
+
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-item a:hover {
+    color: var(--text-hover);
+}
+
+
+
+/* main */
+
+h2, h1 {
+    font-family: "Jaini", system-ui;
+    font-size: 3em;
+    text-shadow: -4px 4px #011404;
+    font-weight: lighter;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.6em;
+    text-shadow: -2px 2px #01140447;
+}
+
+li {
+    list-style: none;
+    align-self: right;
+}
+
+
+/* Feedback Form */
+
+.feedback-container {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+}
+
+.feedback-title {
+    margin-top: 0;
+}
+
+aside {
+    text-align: center ;
+    width: 30%;
+}
+
+input, textarea, input.email{
+    font-size: 14px;
+    border: 2px solid black;
+    background-color: #dff9df79;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+textarea {
+    min-height: 75px;
+    max-height: 200px;
+    resize: none;
+}
+
+.submit {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.feedback-card {
+    border: 2px solid black;
+    margin-bottom: 0;
+    box-shadow: -0.8rem 0.8rem 1px rgba(29, 30, 28, 0.395);
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.email::placeholder, textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.feedback-header {
+    color: rgba(255, 255, 255, 0.433);
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 2px solid black;
+}
+
+.feedback-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-body .email {
+    height: 40px;
+}
+
+.feedback-body .message {
+    margin-top: 10px;
+}
+
+.feedback-body .submit {
+    padding: 5px 10px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+
+/* Contact Information */
+
+.container-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+.contact-info, .socials {
+    margin: 6rem 0;
+    width: 500px;
+}
+
+.inf-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 2em;
+}
+
+.time {
+    text-align: right;
+}
+
+.inf {
+    padding: 2em;
+    box-shadow: -2px 2px 10px rgba(4, 27, 2, 0.159);
+    border-radius: 10px;
+}
+
+.socials>p {
+    width: 80%;
+    margin-bottom: 3em;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.icons a {
+    width: 150px;
+    padding: 0.5em 1.2em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.301);
+    border-radius: 5px;
+    color: var(--text-light);
+}
+
+.icons a:hover {
+    background-color: #0112042f;
+}
+
+.icons svg {
+    margin-right: 16px;
+}
+
+.icons span {
+    font-size: 16px;
+}
+
+
+
+/* scrollbar */
+
+body::-webkit-scrollbar {
+    width: 14px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--track-color);
+    cursor: pointer;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: var(--thumb-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* form scrollbar */
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+  
+textarea::-webkit-scrollbar-track {
+    background: rgba(6, 81, 6, 0.2);
+    cursor: pointer;
+}
+  
+textarea::-webkit-scrollbar-thumb {
+    background: rgba(5, 54, 5, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+}
